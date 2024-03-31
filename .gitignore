@@ -7,11 +7,13 @@
 !/.github/
 !/.github/CODEOWNERS
 !/.github/assets/next.png
+!/.github/workflows/*.yaml
 !/.github/CODE_OF_CONDUCT.md
 !/.github/SECURITY.md
 
 !/gradle/dependencies.yaml
 !/gradle/libs.versions.toml
+!/gradle/wrapper/gradle-wrapper.properties
 
 !/LICENSE
 !/README.md
