@@ -5,6 +5,7 @@ runs:
   steps:
     - shell: sh
       run: |
+        ls -la
         source $GITHUB_WORKSPACE/gradle/wrapper/gradle-wrapper.properties
         echo "Gradle URL: $distributionUrl"
         path=${{ runner.temp }}/gradle
