@@ -27,7 +27,7 @@ class DependencyGroups(
 		 * The title of the dependency group. May be used to visualize
 		 * the group in some user interface.
 		 */
-		val title: String,
+		val title: String ,
 
 		/**
 		 * A link to the repository where the code for the dependencies
