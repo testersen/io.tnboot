@@ -17,6 +17,6 @@ jobs:
           echo "Gradle URL: $distributionUrl"
           path=${{ runner.temp }}/gradle
           wget -O ${{ runner.temp }}/gradle.zip $distributionUrl
-          unzip ${{ runner.temp }}/gradle.zip -d $path
-          ls --no-verbose -q1 $path
+          unzip --no-verbose ${{ runner.temp }}/gradle.zip -d $path
+          ls -1 $path
 
