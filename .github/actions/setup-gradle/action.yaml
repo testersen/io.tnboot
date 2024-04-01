@@ -3,7 +3,7 @@ description: Setup Gradle
 runs:
   using: composite
   steps:
-    - shell: sh
+    - shell: bash
       run: |
         ls -la
         source $GITHUB_WORKSPACE/gradle/wrapper/gradle-wrapper.properties
