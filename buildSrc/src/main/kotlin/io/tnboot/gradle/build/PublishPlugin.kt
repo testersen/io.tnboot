@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory
  * Internal plugin to configure maven publications on all projects,
  * given that the project does not disable publishing with
  * [Extension.disable] and that the project has no children (unless
- * explicitly allowed with [Extension.publishEvenWithChildren]). test2
+ * explicitly allowed with [Extension.publishEvenWithChildren]). test3
  */
 class PublishPlugin : Plugin<Project> {
 	companion object {
