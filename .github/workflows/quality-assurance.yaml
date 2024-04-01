@@ -17,4 +17,15 @@ jobs:
         run: gradle test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - run: |
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            echo "This is a push to a branch"
+          elif [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            echo "This is a push to a pull request"
+          fi
 
