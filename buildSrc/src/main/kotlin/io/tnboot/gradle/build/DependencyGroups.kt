@@ -16,7 +16,7 @@ private val mapper = ObjectMapper(YAMLFactory())
 
 /**
  * A class that reads a YAML file containing dependency groups and
- * provides a list of dependencies and a map of version properties. test
+ * provides a list of dependencies and a map of version properties. test2
  */
 class DependencyGroups(
 	file: File,
