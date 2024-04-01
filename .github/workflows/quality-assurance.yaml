@@ -16,7 +16,7 @@ jobs:
           source gradle/wrapper/gradle-wrapper.properties
           echo "Gradle URL: $distributionUrl"
           path=${{ runner.temp }}/gradle
-          wget -O ${{ runner.temp }}/gradle.zip $distributionUrl
-          unzip --no-verbose ${{ runner.temp }}/gradle.zip -d $path
+          wget --no-verbose -O ${{ runner.temp }}/gradle.zip $distributionUrl
+          unzip ${{ runner.temp }}/gradle.zip -d $path
           ls -1 $path
 
