@@ -21,4 +21,6 @@ jobs:
           echo $path/$(ls -1 $path)/bin >> $GITHUB_PATH
       - name: Tests
         run: gradle test
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
