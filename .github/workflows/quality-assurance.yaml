@@ -12,13 +12,7 @@ jobs:
           java-version: "21"
           distribution: "temurin"
       - name: Setup Gradle
-        run: |
-          source gradle/wrapper/gradle-wrapper.properties
-          echo "Gradle URL: $distributionUrl"
-          path=${{ runner.temp }}/gradle
-          wget --no-verbose -O ${{ runner.temp }}/gradle.zip $distributionUrl
-          unzip ${{ runner.temp }}/gradle.zip -d $path
-          echo $path/$(ls -1 $path)/bin >> $GITHUB_PATH
+        uses: ./.github/actions/setup-gradle
       - name: Tests
         run: gradle test
         env:
