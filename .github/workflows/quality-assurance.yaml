@@ -18,5 +18,5 @@ jobs:
           path=${{ runner.temp }}/gradle
           wget -O ${{ runner.temp }}/gradle.zip $distributionUrl
           unzip ${{ runner.temp }}/gradle.zip -d $path
-          ls -q1 $path
+          ls --no-verbose -q1 $path
 
