@@ -5,7 +5,7 @@ runs:
   steps:
     - shell: sh
       run: |
-        source gradle/wrapper/gradle-wrapper.properties
+        source $GITHUB_WORKSPACE/gradle/wrapper/gradle-wrapper.properties
         echo "Gradle URL: $distributionUrl"
         path=${{ runner.temp }}/gradle
         wget --no-verbose -O ${{ runner.temp }}/gradle.zip $distributionUrl
