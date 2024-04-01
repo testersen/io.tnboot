@@ -1,7 +1,7 @@
 name: Quality Assurance
 on: [workflow_call, push]
 jobs:
-  tests:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -18,5 +18,7 @@ jobs:
           path=${{ runner.temp }}/gradle
           wget --no-verbose -O ${{ runner.temp }}/gradle.zip $distributionUrl
           unzip ${{ runner.temp }}/gradle.zip -d $path
-          ls $path/$(ls -1 $path)/bin
+          echo $path/$(ls -1 $path)/bin >> $GITHUB_PATH
+      - name: Tests
+        run: gradle test
 
