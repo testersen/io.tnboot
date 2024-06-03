@@ -12,4 +12,5 @@ include(
 
 include(
 	":util:util-homedir",
+	":util:util-setenv",
 )
