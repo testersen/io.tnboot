@@ -2,6 +2,7 @@ package io.tnboot.gradle
 
 import io.spring.gradle.dependencymanagement.DependencyManagementPlugin
 import io.tnboot.gradle.environment.Environment
+import io.tnboot.gradle.plugin.AddOpensPlugin
 import io.tnboot.gradle.plugin.AutoExcludeArtifactsPlugin
 import io.tnboot.gradle.plugin.AutoVersionPlugin
 import io.tnboot.gradle.plugin.GitHubPlugin
@@ -51,6 +52,7 @@ class TelenorBootPlugin : Plugin<Project> {
 			plugin<AutoExcludeArtifactsPlugin>(),
 			plugin<AutoVersionPlugin>(),
 			plugin<InjectOpenTelemetryAgentPlugin>(),
+			plugin<AddOpensPlugin>(),
 		)
 	}
 }
